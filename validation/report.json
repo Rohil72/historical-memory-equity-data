@@ -11,49 +11,54 @@
       "details": "Missing: []"
     },
     {
-      "name": "Run Manifest Count (150 cells)",
+      "name": "Run Membership & Exact Coverage (150 cells, 11 arms, 6 markets)",
       "passed": true,
-      "details": "Found 150 rows"
+      "details": "150 rows: True, Unique run_id: True, 11 arms: True, Cell allocation: True"
     },
     {
-      "name": "11 Final Arms Present",
+      "name": "Record Schema Validation (tables.schema.json)",
       "passed": true,
-      "details": "Found 11 arms: ['BENCH_EQUAL_WEIGHT', 'BENCH_MOMENTUM_21', 'HIST_PRIOR', 'MEM_RANDOM', 'MEM_SIM', 'MLP_BASE', 'MLP_GATE', 'MLP_MIX_SELECTED', 'TRANS_BASE', 'TRANS_GATE', 'TRANS_MIX_SELECTED']"
+      "details": "Schema errors: 0"
     },
     {
-      "name": "6 Sovereign Markets Present",
+      "name": "Numeric Validity (Finite checks for primary & secondary)",
       "passed": true,
-      "details": "Found 6 markets"
+      "details": "All required contrast metrics finite"
     },
     {
-      "name": "Master Performance Replay Agreement (<= 1e-4, no NaNs)",
+      "name": "Point Estimates & Identity (<= 1e-10 mathematical identity, replay agreement)",
       "passed": true,
-      "details": "Max SR diff: 4.73e-05"
+      "details": "Identities verified to <= 1e-10"
     },
     {
-      "name": "Primary Contrasts Point Difference Replay (<= 1e-4, valid CIs)",
+      "name": "Confidence Intervals Validation (both endpoints compared, logical ordering)",
       "passed": true,
-      "details": "Max delta diff: 0.00e+00"
+      "details": "All confidence intervals valid and match reference"
     },
     {
-      "name": "Secondary Contrasts Replay Agreement (<= 1e-4)",
+      "name": "P-Values & Step-Down Holm Adjustment (C1-C5 family)",
       "passed": true,
-      "details": "Max delta diff: 0.00e+00"
+      "details": "P-values and Holm multipliers verified"
     },
     {
-      "name": "Penny Accounting Identity Certification",
+      "name": "Block Length Sensitivity (L in {2, 4, 8} weeks verified)",
       "passed": true,
-      "details": "Max discrepancy <= $0.10 across all cells"
+      "details": "All block lengths verified"
     },
     {
       "name": "Bootstrap Draws Count & Finiteness (10,000 draws)",
       "passed": true,
-      "details": "Found 10000 draws, has_nans=False"
+      "details": "10,000 draws verified, no NaNs"
     },
     {
-      "name": "Cryptographic Checksum Manifest (SHA256SUMS.txt)",
+      "name": "Cryptographic Checksums (SHA256SUMS.txt: no empty, no duplicates, exact bytes)",
       "passed": true,
-      "details": "Failures: 0"
+      "details": "All hashes verified"
+    },
+    {
+      "name": "Penny Accounting Certification (Author-Reported)",
+      "passed": true,
+      "details": "Author-reported in conformance_audit_report.json (max discrepancy <= $0.10 across all cells; not independently verified from raw trade ticks)"
     }
   ],
   "all_passed": true

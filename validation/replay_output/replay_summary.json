@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "n_boot": 10000,
+  "primary_contrasts_verified": 5,
+  "secondary_contrasts_verified": 4,
+  "master_arms_verified": 11
+}

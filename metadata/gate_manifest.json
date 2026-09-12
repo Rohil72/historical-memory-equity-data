@@ -1,10 +1,10 @@
 {
-  "gate_architecture": "Linear logistic g_t = sigmoid(a^T u_t + b)",
-  "inputs": [
-    "abs_base_prediction",
-    "abs_discrepancy",
-    "abs_mem_prediction",
-    "asset_volatility_21"
+  "gate_architecture": "Normalized linear logistic model: g_t = sigmoid(w^T z_t + b), where z_t = (u_t - mu_u) / (sigma_u + 1e-8)",
+  "ordered_inputs": [
+    "abs(base_prediction)",
+    "abs(base_prediction - memory_prediction)",
+    "abs(memory_prediction)",
+    "constant_baseline_volatility (0.015)"
   ],
   "fitted_checkpoints": {
     "mlp_seed_7": "models/trust_gate_mlp_seed_7.pt",

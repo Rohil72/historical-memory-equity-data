@@ -6,6 +6,10 @@
     "2020-12-31"
   ],
   "scaling_method": "(x - mean) / (std + 1e-8)",
+  "clipping_bounds": [
+    -5.0,
+    5.0
+  ],
   "markets": [
     "US",
     "India",

@@ -25,7 +25,7 @@ All variables and tables in this repository follow strict schema and typing conv
 * `turnover` (float64): Annual portfolio turnover multiple.
 * `avg_exposure` (float64): Average fraction of portfolio capital deployed in equity slots.
 * `forecast_mse` (float64): Mean squared prediction error against 63-session forward return.
-* `rank_ic` (float64): Spearman rank correlation between forecasts and realized returns across assets.
+* `rank_ic` (float64): Pooled Spearman rank correlation between forecasts and realized returns across assets; HIST_PRIOR records 0.0 as an explicit legacy numerical sentinel for an undefined rank correlation (uniform cross-sectional forecasts produce zero rank variance).
 
 ---
 

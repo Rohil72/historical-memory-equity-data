@@ -11,7 +11,7 @@ authors:
     given-names: "Vaibhav"
     affiliation: "Predixion AI"
 title: "Historical Market Memory Equity Selection Data: Six-Market Evaluation Matrix and Bootstrapped Contrasts"
-version: 1.0.1
+version: 1.0.2
 date-released: 2026-09-13
 url: "https://github.com/Rohil72/historical-memory-equity-data"
 repository-code: "https://github.com/Rohil72/historical-memory-equity-data"

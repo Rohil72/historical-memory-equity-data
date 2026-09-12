@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.2",
+  "description": "Classification of research artifacts across four auditable tiers: included, downloadable_separately, excluded, and not_verified.",
+  "tiers": {
+    "included": {
+      "description": "Artifacts committed directly to the git repository and included in the release distribution.",
+      "items": [
+        {
+          "path": "data/primary_contrasts.csv",
+          "role": "Canonical displayed table for Table 2"
+        },
+        {
+          "path": "data/primary_contrasts_full_precision.csv",
+          "role": "Unrounded float64 results for Table 2"
+        },
+        {
+          "path": "data/secondary_contrasts.csv",
+          "role": "Canonical displayed table for Table 3"
+        },
+        {
+          "path": "data/secondary_contrasts_full_precision.csv",
+          "role": "Unrounded float64 results for Table 3"
+        },
+        {
+          "path": "data/master_performance.csv",
+          "role": "Canonical displayed table for Table 1"
+        },
+        {
+          "path": "data/master_performance_full_precision.csv",
+          "role": "Unrounded float64 results for Table 1"
+        },
+        {
+          "path": "data/market_performance.csv",
+          "role": "Sovereign market performance matrix for Table 5"
+        },
+        {
+          "path": "data/block_length_sensitivity.csv",
+          "role": "Sensitivity across L in {2, 4, 8} weeks for Table 4"
+        },
+        {
+          "path": "data/bootstrap_draws.parquet",
+          "role": "10,000 synchronized block bootstrap draws"
+        },
+        {
+          "path": "data/bootstrap_draws.csv",
+          "role": "CSV export of 10,000 bootstrap draws"
+        },
+        {
+          "path": "data/daily_returns.parquet",
+          "role": "Complete continuous 2024 daily NAV time series (150 runs)"
+        },
+        {
+          "path": "data/daily_returns.csv",
+          "role": "CSV export of continuous 2024 daily NAV time series"
+        },
+        {
+          "path": "data/executions.parquet",
+          "role": "Institutional trade execution ledger (2,538 trades)"
+        },
+        {
+          "path": "data/executions.csv",
+          "role": "CSV export of trade execution ledger"
+        },
+        {
+          "path": "data/run_manifest.csv",
+          "role": "150 evaluated run cells with arm, market, and seed parameters"
+        },
+        {
+          "path": "data/metrics_by_run.csv",
+          "role": "Cell-level Sharpe, return, drawdown, and win rate metrics"
+        },
+        {
+          "path": "data/feature_definitions.csv",
+          "role": "Evaluated 23 technical features with equations and fill rules"
+        },
+        {
+          "path": "data/universe_manifest.csv",
+          "role": "Constituent equities across 6 sovereign markets"
+        },
+        {
+          "path": "data/gate_diagnostic.csv",
+          "role": "Quintile binned gate values and memory win percentages"
+        },
+        {
+          "path": "data/development_mixture_grid.csv",
+          "role": "Development period H2 2021 grid search results"
+        },
+        {
+          "path": "data/estimand_reconciliation.csv",
+          "role": "Reconciliation between pooled Sharpe and mean market Sharpe"
+        },
+        {
+          "path": "metadata/analysis_config.json",
+          "role": "Recorded bootstrap and evaluation settings"
+        },
+        {
+          "path": "metadata/experiment_contract.json",
+          "role": "Formal pre-registered scientific experiment contract"
+        },
+        {
+          "path": "metadata/table_sources.csv",
+          "role": "Exact inputs, columns, filters, and code revisions for manuscript tables"
+        },
+        {
+          "path": "metadata/conformance_audit_report.json",
+          "role": "Conformance audit summary and parameter hashes"
+        },
+        {
+          "path": "metadata/gate_manifest.json",
+          "role": "Selective trust gate architecture and checkpoint mappings"
+        },
+        {
+          "path": "metadata/scaler_manifest.json",
+          "role": "Standardization parameters and clipping specifications"
+        },
+        {
+          "path": "metadata/model_manifest.json",
+          "role": "Evaluated model specifications and input conventions"
+        },
+        {
+          "path": "schema/tables.schema.json",
+          "role": "JSON schemas for data validation"
+        }
+      ]
+    },
+    "downloadable_separately": {
+      "description": "Large binary assets and model checkpoints hosted on verified public GitHub release assets.",
+      "items": [
+        {
+          "name": "historical-memory-equity-data-v1.0.2.zip",
+          "url": "https://github.com/Rohil72/historical-memory-equity-data/releases/download/v1.0.2/historical-memory-equity-data-v1.0.2.zip",
+          "description": "Complete frozen research data archive bundle"
+        },
+        {
+          "name": "models/mlp_encoder_seed_7.pt",
+          "url": "https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.2/models/mlp_encoder_seed_7.pt",
+          "sha256": "aef80aab3a58b674db09f2da25f4ac1885566131ed3abe525c905b02f81b7e60",
+          "description": "Trained MLP predictor checkpoint (seed 7)"
+        },
+        {
+          "name": "models/mlp_encoder_seed_17.pt",
+          "url": "https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.2/models/mlp_encoder_seed_17.pt",
+          "sha256": "7372b0b0dcfc9865cf21136d569f51536682b1038c3ee9b35796343b680446f4",
+          "description": "Trained MLP predictor checkpoint (seed 17)"
+        },
+        {
+          "name": "models/mlp_encoder_seed_37.pt",
+          "url": "https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.2/models/mlp_encoder_seed_37.pt",
+          "sha256": "2f7aee308b93fb9ad8da7c1dd46f45af3b63231abb94a7869e6c6e5e7e5ed65b",
+          "description": "Trained MLP predictor checkpoint (seed 37)"
+        },
+        {
+          "name": "models/trust_gate_mlp_seed_*.pt",
+          "url": "https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.2/models/",
+          "description": "Fitted selective trust gate weights across seeds 7, 17, 37"
+        }
+      ]
+    },
+    "excluded": {
+      "description": "Heavy intermediate binary caches and delisted corporate action assets explicitly omitted from tracking.",
+      "items": [
+        {
+          "path": "research_runs/memory_study/cache/*.npy",
+          "size_approx": "1.87 GB",
+          "reason": "Large binary precomputed embedding arrays excluded to prevent git bloat; recomputable in under 5 minutes via python -m memory_study.cache_builder."
+        },
+        {
+          "tickers": [
+            "CIEL3.SA",
+            "JBSS3.SA",
+            "EMBR3.SA",
+            "STM.PA",
+            "AHT.L"
+          ],
+          "reason": "Documented delisting, primary listing outside domestic market, or corporate restructuring discontinuities."
+        }
+      ]
+    },
+    "not_verified": {
+      "description": "Historical exploratory runs or author-reported flags not certified as part of the clean synchronous replication.",
+      "items": [
+        {
+          "scope": "Study 1 Historical Development Retrospective (551 exploratory jobs, 2013-2024)",
+          "reason": "Exploratory candidate search preceding the registered negative validation study."
+        },
+        {
+          "scope": "Tick-level broker fills penny accounting",
+          "reason": "Author-reported flag in conformance_audit_report.json (max discrepancy <= $0.10); verified at portfolio aggregate level rather than raw millisecond exchange matching engine ticks."
+        }
+      ]
+    }
+  }
+}
