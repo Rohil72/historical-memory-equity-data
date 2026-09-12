@@ -1,8 +1,8 @@
-manuscript_table,input_file,generating_script,provenance_status
-Table 1 (Master Performance),data/master_performance.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Table 2 (Primary Contrasts C1-C5),data/primary_contrasts.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Table 3 (Secondary Contrasts),data/secondary_contrasts.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Table 4 (Block Length Sensitivity),data/block_length_sensitivity.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Table 5 (Market Robustness Matrix),data/market_performance.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Table 6 (Gate Diagnostic),data/gate_diagnostic.csv,memory_study.reconcile_final_analysis,reproduced_canonical
-Development Mixture Table,data/development_mixture_grid.csv,memory_study.select_fixed_mixture,reproduced_canonical
+manuscript_table,input_file,full_precision_file,generating_script,derivation_pathway,provenance_status
+Table 1 (Master Performance Summary),data/master_performance.csv,data/master_performance_full_precision.csv,memory_study.reconcile_final_analysis:compute_canonical_master_metrics,T(A) multi-market average across 6 sovereign markets (150 cells); daily compounding annualized return and ddof=0 Sharpe,reproduced_canonical
+Table 2 (Primary Contrasts C1-C5),data/primary_contrasts.csv,data/primary_contrasts_full_precision.csv,memory_study.reconcile_final_analysis:execute_reanalysis,"10,000-draw synchronized calendar-week block bootstrap (L=4 weeks) with step-down Holm-Bonferroni correction",reproduced_canonical
+Table 3 (Secondary Comparator Contrasts),data/secondary_contrasts.csv,data/secondary_contrasts_full_precision.csv,memory_study.reconcile_final_analysis:execute_reanalysis,"10,000-draw synchronized block bootstrap (L=4 weeks); unadjusted exploratory p-values",reproduced_canonical
+Table 4 (Block Length Sensitivity Analysis),data/block_length_sensitivity.csv,data/block_length_sensitivity.csv,memory_study.reconcile_final_analysis:execute_reanalysis,"Moving block bootstrap across L in {2, 4, 8} calendar weeks (10, 20, 40 trading sessions)",reproduced_canonical
+Table 5 (Sovereign Market Breakdown Matrix),data/market_performance.csv,data/market_performance.csv,memory_study.reconcile_final_analysis:compute_canonical_master_metrics,"Per-market mean annualized returns, Sharpe ratios, and positive realization counts across 6 sovereign markets",reproduced_canonical
+Table 6 (Selective Trust Gate Diagnostic),data/gate_diagnostic.csv,data/gate_diagnostic.csv,memory_study.reconcile_final_analysis:build_diagnostic_table,"Binning 25,753 query-level gate values into quintile ranges [0, 0.2) to [0.8, 1.0]; memory win percentage",reproduced_canonical
+Development Mixture Table (Grid Search),data/development_mixture_grid.csv,data/development_mixture_grid.csv,memory_study.select_fixed_mixture:select_fixed_mixture,"Mean net Sharpe grid evaluation across candidate lambdas in {0.0, 0.10, 0.25, 0.50, 1.00} on H2 2021",reproduced_canonical

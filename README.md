@@ -1,14 +1,15 @@
 # Historical Market Memory Equity Selection Data
 
-[![Dataset Release](https://img.shields.io/badge/dataset-v1.0.0-blue.svg)](https://github.com/Rohil72/historical-memory-equity-data/releases/tag/v1.0.0)
-[![Code Release](https://img.shields.io/badge/code-paper--v1.0.0-green.svg)](https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.0)
+[![Dataset Release](https://img.shields.io/badge/dataset-v1.0.1-blue.svg)](https://github.com/Rohil72/historical-memory-equity-data/releases/tag/v1.0.1)
+[![Code Release](https://img.shields.io/badge/code-paper--v1.0.1-green.svg)](https://github.com/Rohil72/Core-RL-Agent/tree/paper-v1.0.1)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSES.md)
 
 This repository hosts the canonical research data, evaluation matrices, trade ledgers, bootstrap distributions, and metadata accompanying the article:
 
-> **"A Reproducibility and Robustness Audit of Historical Market Memory for Equity Selection: Negative Validation Across Six Markets"**  
+> **"Auditable Historical-Memory Retrieval for Long-Horizon Equity Selection: Negative Validation Across Six Sovereign Markets"*
+> Authors: Rohil Gujarathi, Sangeeta Oswal, Vaibhav Goyal*  
 > Target Journal: *Digital Finance* (Springer Nature)  
-> Corresponding Code Repository: [`Rohil72/Core-RL-Agent`](https://github.com/Rohil72/Core-RL-Agent) (Tag: `paper-v1.0.0`, Commit: `559bbe7f015c2b22880f7d721d7fd7b55bcb8a2a`)
+> Corresponding Code Repository: [`Rohil72/Core-RL-Agent`](https://github.com/Rohil72/Core-RL-Agent) (Tag: `paper-v1.0.1`, Commit: `559bbe7f015c2b22880f7d721d7fd7b55bcb8a2a`)
 
 ---
 

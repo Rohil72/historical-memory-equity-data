@@ -1,15 +1,24 @@
 cff-version: 1.2.0
-message: "If you use this dataset in your research, please cite it as below."
+message: "If you use this dataset or empirical evaluation artifacts, please cite it as below."
 authors:
   - family-names: "Gujarathi"
     given-names: "Rohil"
+    affiliation: "Vivekanand Education Society's Institute of Technology (VESIT)"
+  - family-names: "Oswal"
+    given-names: "Sangeeta"
     affiliation: "Vivekanand Education Society's Institute of Technology (VESIT)"
   - family-names: "Goyal"
     given-names: "Vaibhav"
     affiliation: "Predixion AI"
 title: "Historical Market Memory Equity Selection Data: Six-Market Evaluation Matrix and Bootstrapped Contrasts"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-13
 url: "https://github.com/Rohil72/historical-memory-equity-data"
-repository-code: "https://github.com/Rohil72/Core-RL-Agent"
+repository-code: "https://github.com/Rohil72/historical-memory-equity-data"
+keywords:
+  - "quantitative finance"
+  - "market memory"
+  - "bootstrap inference"
+  - "reproducibility audit"
+  - "empirical asset pricing"
 license: CC-BY-4.0

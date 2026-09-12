@@ -1,38 +1,113 @@
 {
-  "": "http://json-schema.org/draft-07/schema#",
-  "title": "HistoricalMemoryEquityTablesSchema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HistoricalMemoryEquityDataTablesSchema",
+  "description": "Validation schema for canonical data files in historical-memory-equity-data",
   "type": "object",
-  "properties": {
-    "run_id": {
-      "type": "string"
+  "definitions": {
+    "DailyReturnRecord": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "arm",
+        "market",
+        "seed",
+        "date",
+        "calendar_week",
+        "return",
+        "equity"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string"
+        },
+        "arm": {
+          "type": "string"
+        },
+        "market": {
+          "type": "string",
+          "enum": [
+            "US",
+            "India",
+            "China",
+            "Brazil",
+            "France",
+            "UK"
+          ]
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^\\\\d{4}-\\\\d{2}-\\\\d{2}$"
+        },
+        "calendar_week": {
+          "type": "string",
+          "pattern": "^\\\\d{4}-\\\\d{2}-\\\\d{2}$"
+        },
+        "return": {
+          "type": "number"
+        },
+        "equity": {
+          "type": "number"
+        }
+      }
     },
-    "arm": {
-      "type": "string"
-    },
-    "market": {
-      "type": "string",
-      "enum": [
-        "US",
-        "India",
-        "China",
-        "Brazil",
-        "France",
-        "UK"
-      ]
-    },
-    "return": {
-      "type": "number"
-    },
-    "equity": {
-      "type": "number"
-    },
-    "date": {
-      "type": "string",
-      "format": "date"
-    },
-    "calendar_week": {
-      "type": "string",
-      "format": "date"
+    "PrimaryContrastRecord": {
+      "type": "object",
+      "required": [
+        "contrast_id",
+        "candidate",
+        "comparator",
+        "delta_original",
+        "ci_lower",
+        "ci_upper",
+        "p_raw",
+        "p_holm"
+      ],
+      "properties": {
+        "contrast_id": {
+          "type": "string",
+          "enum": [
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C5"
+          ]
+        },
+        "candidate": {
+          "type": "string"
+        },
+        "comparator": {
+          "type": "string"
+        },
+        "delta_original": {
+          "type": "number"
+        },
+        "ci_lower": {
+          "type": "number"
+        },
+        "ci_upper": {
+          "type": "number"
+        },
+        "p_raw": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "p_holm": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "statistically_significant": {
+          "type": "boolean"
+        }
+      }
     }
   }
 }

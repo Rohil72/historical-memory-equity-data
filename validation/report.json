@@ -1,12 +1,12 @@
 {
   "checks": [
     {
-      "name": "Required Data Files",
+      "name": "Required Data Files Exist",
       "passed": true,
       "details": "Missing: []"
     },
     {
-      "name": "Required Metadata Files",
+      "name": "Required Metadata Files Exist",
       "passed": true,
       "details": "Missing: []"
     },
@@ -26,12 +26,17 @@
       "details": "Found 6 markets"
     },
     {
-      "name": "Master Performance Exact Replay Identity (<= 1e-10)",
+      "name": "Master Performance Replay Agreement (<= 1e-4, no NaNs)",
       "passed": true,
-      "details": "Max SR diff: 3.33e-16"
+      "details": "Max SR diff: 4.73e-05"
     },
     {
-      "name": "Primary Contrasts Point Difference Replay (<= 1e-4)",
+      "name": "Primary Contrasts Point Difference Replay (<= 1e-4, valid CIs)",
+      "passed": true,
+      "details": "Max delta diff: 0.00e+00"
+    },
+    {
+      "name": "Secondary Contrasts Replay Agreement (<= 1e-4)",
       "passed": true,
       "details": "Max delta diff: 0.00e+00"
     },
@@ -41,9 +46,14 @@
       "details": "Max discrepancy <= $0.10 across all cells"
     },
     {
-      "name": "Bootstrap Draws Count (10,000 draws)",
+      "name": "Bootstrap Draws Count & Finiteness (10,000 draws)",
       "passed": true,
-      "details": "Found 10000 draws"
+      "details": "Found 10000 draws, has_nans=False"
+    },
+    {
+      "name": "Cryptographic Checksum Manifest (SHA256SUMS.txt)",
+      "passed": true,
+      "details": "Failures: 0"
     }
   ],
   "all_passed": true

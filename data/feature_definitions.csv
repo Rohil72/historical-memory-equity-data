@@ -1,24 +1,24 @@
-feature_idx,name,category,lookback_sessions,equation,scaling
-0,returns_1d,Momentum,1,P_t / P_{t-1} - 1,Market-specific standardized pre-2021
-1,returns_5d,Momentum,5,P_t / P_{t-5} - 1,Market-specific standardized pre-2021
-2,returns_21d,Momentum,21,P_t / P_{t-21} - 1,Market-specific standardized pre-2021
-3,returns_63d,Momentum,63,P_t / P_{t-63} - 1,Market-specific standardized pre-2021
-4,ma_ratio_5,Trend,5,P_t / SMA_5 - 1,Market-specific standardized pre-2021
-5,ma_ratio_21,Trend,21,P_t / SMA_21 - 1,Market-specific standardized pre-2021
-6,ma_ratio_63,Trend,63,P_t / SMA_63 - 1,Market-specific standardized pre-2021
-7,ma_ratio_252,Trend,252,P_t / SMA_252 - 1,Market-specific standardized pre-2021
-8,volatility_21,Volatility,21,"Std(returns_1d, 21) * sqrt(252)",Market-specific standardized pre-2021
-9,volatility_63,Volatility,63,"Std(returns_1d, 63) * sqrt(252)",Market-specific standardized pre-2021
-10,volatility_252,Volatility,252,"Std(returns_1d, 252) * sqrt(252)",Market-specific standardized pre-2021
-11,rsi_14,Oscillator,14,100 - 100 / (1 + RS),Market-specific standardized pre-2021
-12,macd,Trend,26,EMA_12 - EMA_26,Market-specific standardized pre-2021
-13,macd_signal,Trend,9,EMA_9(macd),Market-specific standardized pre-2021
-14,macd_hist,Trend,9,macd - macd_signal,Market-specific standardized pre-2021
-15,bollinger_upper,Volatility,20,(SMA_20 + 2*Std_20) / P_t - 1,Market-specific standardized pre-2021
-16,bollinger_lower,Volatility,20,(SMA_20 - 2*Std_20) / P_t - 1,Market-specific standardized pre-2021
-17,bollinger_pct_b,Volatility,20,(P_t - Lower) / (Upper - Lower),Market-specific standardized pre-2021
-18,atr_14,Volatility,14,SMA_14(TrueRange) / P_t,Market-specific standardized pre-2021
-19,high_distance_63,Range,63,"P_t / Max(High, 63) - 1",Market-specific standardized pre-2021
-20,high_distance_252,Range,252,"P_t / Max(High, 252) - 1",Market-specific standardized pre-2021
-21,drawdown_63,Range,63,"P_t / Max(High, 63) - 1",Market-specific standardized pre-2021
-22,drawdown_252,Range,252,"P_t / Max(High, 252) - 1",Market-specific standardized pre-2021
+feature_idx,name,category,lookback_sessions,equation,scaling,fill_handling
+0,tech_return_1d,Momentum,1,P_t / P_{t-1} - 1,"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+1,tech_momentum_3d,Momentum,3,P_t / P_{t-3} - 1,"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+2,tech_momentum_10d,Momentum,10,P_t / P_{t-10} - 1,"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+3,tech_momentum_21d,Momentum,21,P_t / P_{t-21} - 1,"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+4,tech_volatility_21d,Volatility,21,"Std(tech_return_1d, 21)","Per-market standardized [-5.0, 5.0]",fillna(0.01)
+5,tech_volume_sma_21d,Volume,21,"SMA(Volume, 21)","Per-market standardized [-5.0, 5.0]",fillna(Volume)
+6,tech_volume_ratio_21d,Volume,21,Volume / (tech_volume_sma_21d + 1e-9),"Per-market standardized [-5.0, 5.0]",fillna(1.0)
+7,tech_volume_change_1d,Volume,1,Volume_t / Volume_{t-1} - 1,"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+8,tech_intraday_range_hl,Volatility,1,(High - Low) / (Close + 1e-9),"Per-market standardized [-5.0, 5.0]",fillna(0.02)
+9,tech_drawdown_from_peak_21d,Range,252,"(Close - RollingMax(Close, 252)) / (RollingMax + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+10,tech_trend_slope_21d,Trend,21,"LinearSlope(Close, 21) / (Close + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+11,tech_close_vs_sma_50,Trend,50,"(Close - SMA(Close, 50)) / (SMA_50 + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+12,tech_close_vs_sma_150,Trend,150,"(Close - SMA(Close, 150)) / (SMA_150 + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+13,tech_close_vs_sma_200,Trend,200,"(Close - SMA(Close, 200)) / (SMA_200 + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+14,tech_sma_200_trend_20,Trend,220,"(SMA_200 - Shift(SMA_200, 20)) / (Shift(SMA_200, 20) + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+15,tech_pct_above_52w_low,Range,252,"(Close - RollingMin(Close, 252)) / (RollingMin + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+16,tech_pct_from_52w_high,Range,252,"(Close - RollingMax(Close, 252)) / (RollingMax + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.0)
+17,tech_up_down_volume_ratio_50,Volume,50,"RollingSum(UpVol, 50) / (RollingSum(DownVol, 50) + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(1.0)
+18,tech_rsi_14,Oscillator,14,(100 - (100 / (1 + RS))) / 100,"Per-market standardized [-5.0, 5.0]",fillna(0.50)
+19,tech_atr_ratio_14,Volatility,14,"SMA(TrueRange, 14) / (Close + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(0.02)
+20,tech_macd_signal_diff,Trend,26,(MACD - Signal) / (Close + 1e-9),"Per-market standardized [-5.0, 5.0]",fillna(0.0)
+21,tech_bollinger_bandwidth_20,Volatility,20,(UpperBand - LowerBand) / (SMA_20 + 1e-9),"Per-market standardized [-5.0, 5.0]",fillna(0.04)
+22,tech_historical_vol_ratio_63_21,Volatility,63,"Std(Return, 63) / (Std(Return, 21) + 1e-9)","Per-market standardized [-5.0, 5.0]",fillna(1.0)
