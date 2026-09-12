@@ -1,0 +1,24 @@
+feature_idx,name,category,lookback_sessions,equation,scaling
+0,returns_1d,Momentum,1,P_t / P_{t-1} - 1,Market-specific standardized pre-2021
+1,returns_5d,Momentum,5,P_t / P_{t-5} - 1,Market-specific standardized pre-2021
+2,returns_21d,Momentum,21,P_t / P_{t-21} - 1,Market-specific standardized pre-2021
+3,returns_63d,Momentum,63,P_t / P_{t-63} - 1,Market-specific standardized pre-2021
+4,ma_ratio_5,Trend,5,P_t / SMA_5 - 1,Market-specific standardized pre-2021
+5,ma_ratio_21,Trend,21,P_t / SMA_21 - 1,Market-specific standardized pre-2021
+6,ma_ratio_63,Trend,63,P_t / SMA_63 - 1,Market-specific standardized pre-2021
+7,ma_ratio_252,Trend,252,P_t / SMA_252 - 1,Market-specific standardized pre-2021
+8,volatility_21,Volatility,21,"Std(returns_1d, 21) * sqrt(252)",Market-specific standardized pre-2021
+9,volatility_63,Volatility,63,"Std(returns_1d, 63) * sqrt(252)",Market-specific standardized pre-2021
+10,volatility_252,Volatility,252,"Std(returns_1d, 252) * sqrt(252)",Market-specific standardized pre-2021
+11,rsi_14,Oscillator,14,100 - 100 / (1 + RS),Market-specific standardized pre-2021
+12,macd,Trend,26,EMA_12 - EMA_26,Market-specific standardized pre-2021
+13,macd_signal,Trend,9,EMA_9(macd),Market-specific standardized pre-2021
+14,macd_hist,Trend,9,macd - macd_signal,Market-specific standardized pre-2021
+15,bollinger_upper,Volatility,20,(SMA_20 + 2*Std_20) / P_t - 1,Market-specific standardized pre-2021
+16,bollinger_lower,Volatility,20,(SMA_20 - 2*Std_20) / P_t - 1,Market-specific standardized pre-2021
+17,bollinger_pct_b,Volatility,20,(P_t - Lower) / (Upper - Lower),Market-specific standardized pre-2021
+18,atr_14,Volatility,14,SMA_14(TrueRange) / P_t,Market-specific standardized pre-2021
+19,high_distance_63,Range,63,"P_t / Max(High, 63) - 1",Market-specific standardized pre-2021
+20,high_distance_252,Range,252,"P_t / Max(High, 252) - 1",Market-specific standardized pre-2021
+21,drawdown_63,Range,63,"P_t / Max(High, 63) - 1",Market-specific standardized pre-2021
+22,drawdown_252,Range,252,"P_t / Max(High, 252) - 1",Market-specific standardized pre-2021

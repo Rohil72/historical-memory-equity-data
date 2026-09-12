@@ -1,0 +1,20 @@
+{
+  "gate_architecture": "Linear logistic g_t = sigmoid(a^T u_t + b)",
+  "inputs": [
+    "abs_base_prediction",
+    "abs_discrepancy",
+    "abs_mem_prediction",
+    "asset_volatility_21"
+  ],
+  "fitted_checkpoints": {
+    "mlp_seed_7": "models/trust_gate_mlp_seed_7.pt",
+    "mlp_seed_17": "models/trust_gate_mlp_seed_17.pt",
+    "mlp_seed_37": "models/trust_gate_mlp_seed_37.pt",
+    "transformer_seed_7": "models/trust_gate_transformer_seed_7.pt",
+    "transformer_seed_17": "models/trust_gate_transformer_seed_17.pt",
+    "transformer_seed_37": "models/trust_gate_transformer_seed_37.pt"
+  },
+  "spearman_correlation_with_memory_advantage": 0.2232,
+  "p_value": "< 1e-15",
+  "top_gate_bin_memory_win_rate": 0.698
+}

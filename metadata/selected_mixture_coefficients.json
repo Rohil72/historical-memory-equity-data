@@ -1,0 +1,16 @@
+{
+  "mlp": {
+    "selected_lambda": 0.5,
+    "dev_mean_sharpe": 0.5476,
+    "dev_mean_return": 0.0698,
+    "dev_forecast_mse": 0.026358,
+    "dev_rank_ic": -0.1005
+  },
+  "transformer": {
+    "selected_lambda": 0.5,
+    "dev_mean_sharpe": 0.4593,
+    "dev_mean_return": 0.0531,
+    "dev_forecast_mse": 0.039028,
+    "dev_rank_ic": -0.0864
+  }
+}

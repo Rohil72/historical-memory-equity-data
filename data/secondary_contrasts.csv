@@ -1,0 +1,5 @@
+contrast_id,candidate,comparator,label,candidate_metric,comparator_metric,delta_original,ci_lower,ci_upper,p_raw_unadjusted,delta_return_original,ci_ret_lower,ci_ret_upper,p_ret_raw,block_length_weeks,inference_status
+C_MLP_BASE,MLP_GATE,MLP_BASE,Comp: Gated MLP vs Direct MLP,0.803,0.7578,0.0452,-0.69,0.7803,0.9078,0.005,-0.1637,0.1738,0.952,4,"Exploratory, unadjusted for multiple testing"
+C_TRANS_BASE,TRANS_GATE,TRANS_BASE,Comp: Gated Transformer vs Direct Transformer,0.6861,0.2752,0.4109,-0.1307,0.9525,0.1335,0.0837,-0.0342,0.2016,0.1502,4,"Exploratory, unadjusted for multiple testing"
+C_TRANS_MIX,TRANS_GATE,TRANS_MIX_SELECTED,Comp: Gated Transformer vs Selected Mixture,0.6861,0.5534,0.1327,-0.3162,0.5816,0.5494,0.0183,-0.089,0.1256,0.7153,4,"Exploratory, unadjusted for multiple testing"
+C_TRANS_MEM,TRANS_GATE,MEM_SIM,Comp: Gated Transformer vs Pure Memory,0.6861,0.9718,-0.2857,-0.7295,0.1581,0.214,-0.0753,-0.1557,0.0051,0.0657,4,"Exploratory, unadjusted for multiple testing"
