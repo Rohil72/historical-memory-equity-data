@@ -3,63 +3,214 @@
     {
       "name": "Required Data Files Exist",
       "passed": true,
-      "details": "Missing: []"
+      "details": "Missing: []",
+      "tier": "bundle"
     },
     {
       "name": "Required Metadata Files Exist",
       "passed": true,
-      "details": "Missing: []"
+      "details": "Missing: []",
+      "tier": "bundle"
     },
     {
-      "name": "Run Membership & Exact Coverage (150 cells, 11 arms, 6 markets)",
+      "name": "Run Membership & Exact Cell Coverage (150 cells: 11 arms, 6 markets, exact seeds)",
       "passed": true,
-      "details": "150 rows: True, Unique run_id: True, 11 arms: True, Cell allocation: True"
+      "details": "150 rows: True, Unique run_id: True, Exact grid: True",
+      "tier": "bundle"
     },
     {
-      "name": "Record Schema Validation (tables.schema.json)",
+      "name": "Record Schema & Full Daily Returns Validation",
       "passed": true,
-      "details": "Schema errors: 0"
+      "details": "Schema errors: 0",
+      "tier": "bundle"
     },
     {
       "name": "Numeric Validity (Finite checks for primary & secondary)",
       "passed": true,
-      "details": "All required contrast metrics finite"
+      "details": "All required contrast metrics finite",
+      "tier": "bundle"
     },
     {
-      "name": "Point Estimates & Identity (<= 1e-10 mathematical identity, replay agreement)",
+      "name": "Point Estimates & Mathematical Identity (<= 1e-10)",
       "passed": true,
-      "details": "Identities verified to <= 1e-10"
+      "details": "Mathematical identities verified to <= 1e-10",
+      "tier": "bundle"
     },
     {
-      "name": "Confidence Intervals Validation (both endpoints compared, logical ordering)",
+      "name": "Confidence Intervals Validation (logical bounds and ordering)",
       "passed": true,
-      "details": "All confidence intervals valid and match reference"
+      "details": "All confidence intervals logically ordered (ci_lower <= delta <= ci_upper)",
+      "tier": "bundle"
     },
     {
       "name": "P-Values & Step-Down Holm Adjustment (C1-C5 family)",
       "passed": true,
-      "details": "P-values and Holm multipliers verified"
+      "details": "P-values in [0, 1] and step-down Holm multipliers verified",
+      "tier": "bundle"
     },
     {
-      "name": "Block Length Sensitivity (L in {2, 4, 8} weeks verified)",
+      "name": "Block Length Sensitivity (L in {2, 4, 8} weeks reported)",
       "passed": true,
-      "details": "All block lengths verified"
+      "details": "All block length columns and valid p-values verified",
+      "tier": "bundle"
     },
     {
-      "name": "Bootstrap Draws Count & Finiteness (10,000 draws)",
+      "name": "Bootstrap Draws Count & Strict Finiteness (10,000 draws, finite)",
       "passed": true,
-      "details": "10,000 draws verified, no NaNs"
+      "details": "10,000 draws verified, all numeric draws strictly finite",
+      "tier": "bundle"
     },
     {
       "name": "Cryptographic Checksums (SHA256SUMS.txt: no empty, no duplicates, exact bytes)",
       "passed": true,
-      "details": "All hashes verified"
+      "details": "All hashes verified",
+      "tier": "bundle"
     },
     {
       "name": "Penny Accounting Certification (Author-Reported)",
       "passed": true,
-      "details": "Author-reported in conformance_audit_report.json (max discrepancy <= $0.10 across all cells; not independently verified from raw trade ticks)"
+      "details": "Author-reported in conformance_audit_report.json (max discrepancy <= $0.10 across all cells; not independently verified from raw trade ticks)",
+      "tier": "bundle"
+    },
+    {
+      "name": "Primary Contrasts Full-Precision Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All primary metrics, CIs, and p-values match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Secondary Contrasts Full-Precision Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All secondary metrics, CIs, and p-values match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Block Length Sensitivity Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All sensitivity p-values (2w, 4w, 8w) and intervals match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Bootstrap Draws Replay Agreement & Finiteness (<= 1e-10)",
+      "passed": true,
+      "details": "All 10,000 draws across 9 contrast columns match replayed draws to <= 1e-10 and are strictly finite",
+      "tier": "replay"
+    },
+    {
+      "name": "Master Performance Recomputed Metrics Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "Annualized return and Sharpe ratio match replayed metrics to <= 1e-10",
+      "tier": "replay"
     }
   ],
+  "bundle_checks": [
+    {
+      "name": "Required Data Files Exist",
+      "passed": true,
+      "details": "Missing: []",
+      "tier": "bundle"
+    },
+    {
+      "name": "Required Metadata Files Exist",
+      "passed": true,
+      "details": "Missing: []",
+      "tier": "bundle"
+    },
+    {
+      "name": "Run Membership & Exact Cell Coverage (150 cells: 11 arms, 6 markets, exact seeds)",
+      "passed": true,
+      "details": "150 rows: True, Unique run_id: True, Exact grid: True",
+      "tier": "bundle"
+    },
+    {
+      "name": "Record Schema & Full Daily Returns Validation",
+      "passed": true,
+      "details": "Schema errors: 0",
+      "tier": "bundle"
+    },
+    {
+      "name": "Numeric Validity (Finite checks for primary & secondary)",
+      "passed": true,
+      "details": "All required contrast metrics finite",
+      "tier": "bundle"
+    },
+    {
+      "name": "Point Estimates & Mathematical Identity (<= 1e-10)",
+      "passed": true,
+      "details": "Mathematical identities verified to <= 1e-10",
+      "tier": "bundle"
+    },
+    {
+      "name": "Confidence Intervals Validation (logical bounds and ordering)",
+      "passed": true,
+      "details": "All confidence intervals logically ordered (ci_lower <= delta <= ci_upper)",
+      "tier": "bundle"
+    },
+    {
+      "name": "P-Values & Step-Down Holm Adjustment (C1-C5 family)",
+      "passed": true,
+      "details": "P-values in [0, 1] and step-down Holm multipliers verified",
+      "tier": "bundle"
+    },
+    {
+      "name": "Block Length Sensitivity (L in {2, 4, 8} weeks reported)",
+      "passed": true,
+      "details": "All block length columns and valid p-values verified",
+      "tier": "bundle"
+    },
+    {
+      "name": "Bootstrap Draws Count & Strict Finiteness (10,000 draws, finite)",
+      "passed": true,
+      "details": "10,000 draws verified, all numeric draws strictly finite",
+      "tier": "bundle"
+    },
+    {
+      "name": "Cryptographic Checksums (SHA256SUMS.txt: no empty, no duplicates, exact bytes)",
+      "passed": true,
+      "details": "All hashes verified",
+      "tier": "bundle"
+    },
+    {
+      "name": "Penny Accounting Certification (Author-Reported)",
+      "passed": true,
+      "details": "Author-reported in conformance_audit_report.json (max discrepancy <= $0.10 across all cells; not independently verified from raw trade ticks)",
+      "tier": "bundle"
+    }
+  ],
+  "replay_checks": [
+    {
+      "name": "Primary Contrasts Full-Precision Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All primary metrics, CIs, and p-values match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Secondary Contrasts Full-Precision Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All secondary metrics, CIs, and p-values match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Block Length Sensitivity Replay Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "All sensitivity p-values (2w, 4w, 8w) and intervals match replayed outputs to <= 1e-10",
+      "tier": "replay"
+    },
+    {
+      "name": "Bootstrap Draws Replay Agreement & Finiteness (<= 1e-10)",
+      "passed": true,
+      "details": "All 10,000 draws across 9 contrast columns match replayed draws to <= 1e-10 and are strictly finite",
+      "tier": "replay"
+    },
+    {
+      "name": "Master Performance Recomputed Metrics Agreement (<= 1e-10)",
+      "passed": true,
+      "details": "Annualized return and Sharpe ratio match replayed metrics to <= 1e-10",
+      "tier": "replay"
+    }
+  ],
+  "failed_checks": [],
+  "bundle_consistency_passed": true,
+  "replay_verified": true,
   "all_passed": true
 }

@@ -2,7 +2,7 @@
   "schema_version": "1.0.2",
   "release_version": "1.0.2",
   "created_at_utc": "2026-09-13T03:52:00Z",
-  "total_files": 46,
+  "total_files": 43,
   "files": [
     {
       "path": ".zenodo.json",
@@ -144,26 +144,8 @@
     },
     {
       "path": "DATA_DICTIONARY.md",
-      "bytes": 2924,
-      "sha256": "8ff694f6761d88a6586b9d91c12ab20176511f16bc67bdf6a74996c42c8e2824",
-      "tier": "included"
-    },
-    {
-      "path": "historical-memory-equity-data-v1.0.0.zip",
-      "bytes": 3393832,
-      "sha256": "32c6af8795c93dc1fdb13af67f1833be9a5ad6d55ed27ea1c25140222e73966f",
-      "tier": "included"
-    },
-    {
-      "path": "historical-memory-equity-data-v1.0.1.zip",
-      "bytes": 3401212,
-      "sha256": "f7604a53bd3cc0d266ff8da6808931d943d50434bf22cb153a3286854496b99f",
-      "tier": "included"
-    },
-    {
-      "path": "historical-memory-equity-data-v1.0.1.zip.sha256",
-      "bytes": 108,
-      "sha256": "4b86f0ba73e964637c281fc1c9cf883cd1feabfc587567e43604bfc2f89fce64",
+      "bytes": 2957,
+      "sha256": "76c4044a86a049cf73dbaed1617afa8b4fa7b170692181e34ceea98c6f21bd83",
       "tier": "included"
     },
     {
@@ -180,8 +162,8 @@
     },
     {
       "path": "metadata/artifact_manifest.json",
-      "bytes": 7828,
-      "sha256": "b6734994db4a9f589d6edf1be45f049fb0684b61451528bcf1d8494e50354ae1",
+      "bytes": 7849,
+      "sha256": "35e3cfe94590e37da5e678e8f71b8dea57b8e5c8369d59fcdebfaed2b382528c",
       "tier": "included"
     },
     {
@@ -204,8 +186,8 @@
     },
     {
       "path": "metadata/file_manifest.json",
-      "bytes": 9086,
-      "sha256": "6d9a498cf9c3f73f3b0fb8863deca901e175352ad880f15e9c650e04297d66f7",
+      "bytes": 9509,
+      "sha256": "e9163ad049a66553afd2b5be39a959476e001afd1a1ebdd6c47f50c9243702fc",
       "tier": "included"
     },
     {

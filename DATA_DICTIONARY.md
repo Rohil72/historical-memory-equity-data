@@ -36,7 +36,7 @@ All variables and tables in this repository follow strict schema and typing conv
 * `candidate_metric` (float64): Candidate canonical Sharpe ratio under $T(\text{Cand})$.
 * `comparator_metric` (float64): Comparator canonical Sharpe ratio under $T(\text{Comp})$.
 * `delta_original` (float64): Original point difference: $T(\text{Cand}) - T(\text{Comp})$ (verified to $\le 10^{-10}$).
-* `ci_lower` / `ci_upper` (float64): 95% symmetric centered moving block bootstrap confidence limits ($L=4\text{w}$).
+* `ci_lower` / `ci_upper` (float64): 95% first-order centered calendar-aligned weekly block bootstrap confidence limits ($L=4\text{w}$, 10,000 draws).
 * `p_raw` (float64): Two-sided empirical bootstrap p-value.
 * `p_holm` (float64): Step-down Holm-Bonferroni adjusted p-value on C1–C5.
 * `statistically_significant` (boolean): `True` if $p_{\text{holm}} \le 0.05$, else `False`.

@@ -95,7 +95,7 @@
         },
         {
           "path": "metadata/experiment_contract.json",
-          "role": "Formal pre-registered scientific experiment contract"
+          "role": "Formalized scientific experiment contract and frozen evaluation protocol"
         },
         {
           "path": "metadata/table_sources.csv",
@@ -181,7 +181,7 @@
       "items": [
         {
           "scope": "Study 1 Historical Development Retrospective (551 exploratory jobs, 2013-2024)",
-          "reason": "Exploratory candidate search preceding the registered negative validation study."
+          "reason": "Exploratory candidate search preceding the comparative negative validation study."
         },
         {
           "scope": "Tick-level broker fills penny accounting",
