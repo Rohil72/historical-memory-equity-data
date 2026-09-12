@@ -1,0 +1,8 @@
+manuscript_table,input_file,generating_script,provenance_status
+Table 1 (Master Performance),data/master_performance.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Table 2 (Primary Contrasts C1-C5),data/primary_contrasts.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Table 3 (Secondary Contrasts),data/secondary_contrasts.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Table 4 (Block Length Sensitivity),data/block_length_sensitivity.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Table 5 (Market Robustness Matrix),data/market_performance.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Table 6 (Gate Diagnostic),data/gate_diagnostic.csv,memory_study.reconcile_final_analysis,reproduced_canonical
+Development Mixture Table,data/development_mixture_grid.csv,memory_study.select_fixed_mixture,reproduced_canonical

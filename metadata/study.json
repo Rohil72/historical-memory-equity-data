@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "title": "A Reproducibility and Robustness Audit of Historical Market Memory for Equity Selection: Negative Validation Across Six Markets",
+  "journal": "Digital Finance (Springer Nature)",
+  "authors": [
+    {
+      "name": "Rohil Gujarathi",
+      "affiliation": "Vivekanand Education Society's Institute of Technology (VESIT)"
+    },
+    {
+      "name": "Vaibhav Goyal",
+      "affiliation": "Predixion AI"
+    }
+  ],
+  "evaluation_period": "2024-01-01 to 2024-12-31",
+  "sovereign_markets": [
+    "US",
+    "India",
+    "China",
+    "Brazil",
+    "France",
+    "UK"
+  ],
+  "total_equities": 103,
+  "total_simulated_cells": 150,
+  "arms_count": 11,
+  "code_repository": "https://github.com/Rohil72/Core-RL-Agent",
+  "code_release_tag": "paper-v1.0.0",
+  "code_release_commit": "559bbe7f015c2b22880f7d721d7fd7b55bcb8a2a",
+  "status": "closed_retrospective_evaluation",
+  "limitations": [
+    "Finite multi-market sample yields wide bootstrap confidence intervals spanning zero for C1-C5.",
+    "Yahoo Finance data lacks point-in-time intraday earnings release timestamps; fundamental features merged by date boundary.",
+    "Evaluated on 2024 historical interval; not a live trading deployment."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "": "http://json-schema.org/draft-07/schema#",
+  "title": "HistoricalMemoryEquityTablesSchema",
+  "type": "object",
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "arm": {
+      "type": "string"
+    },
+    "market": {
+      "type": "string",
+      "enum": [
+        "US",
+        "India",
+        "China",
+        "Brazil",
+        "France",
+        "UK"
+      ]
+    },
+    "return": {
+      "type": "number"
+    },
+    "equity": {
+      "type": "number"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "calendar_week": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

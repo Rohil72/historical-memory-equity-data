@@ -1,0 +1,19 @@
+{
+  "models": [
+    {
+      "name": "MLP Backbone (Seeds 7, 17, 37)",
+      "checkpoint_location": "Core-RL-Agent/models/",
+      "purpose": "Direct 63d forecast"
+    },
+    {
+      "name": "Transformer Backbone (Seeds 7, 17, 37)",
+      "checkpoint_location": "Core-RL-Agent/models/",
+      "purpose": "Direct 63d forecast"
+    },
+    {
+      "name": "Selective Trust Gate (MLP & Transformer)",
+      "checkpoint_location": "Core-RL-Agent/models/trust_gate_*.pt",
+      "purpose": "Adaptive gating weight g_t"
+    }
+  ]
+}

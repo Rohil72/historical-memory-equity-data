@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "estimand": "Equal-weighted mean market Sharpe, averaging policy realizations within each market first: T(A) = (1/M) sum_{m=1}^M [ (1/R_{A,m}) sum_{r=1}^{R_{A,m}} SR_{A,m,r} ]",
+  "evaluation_window": {
+    "start": "2024-01-01",
+    "end": "2024-12-31"
+  },
+  "development_window": {
+    "start": "2021-07-01",
+    "end": "2021-12-31",
+    "max_outcome_maturity": "2022-04-11"
+  },
+  "markets": [
+    "Brazil",
+    "China",
+    "France",
+    "India",
+    "UK",
+    "US"
+  ],
+  "n_markets": 6,
+  "total_calendar_weeks": 53,
+  "bootstrap": {
+    "draws": 10000,
+    "primary_block_length_weeks": 4,
+    "sensitivity_block_lengths_weeks": [
+      2,
+      8
+    ],
+    "random_seed": 42,
+    "inference_method": "first_order_centered_block_bootstrap_approximation",
+    "multiplicity_correction": "step_down_holm_bonferroni_on_c1_c5"
+  },
+  "selected_mixture_coefficients": {
+    "mlp": 0.5,
+    "transformer": 0.5
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "": "http://json-schema.org/draft-07/schema#",
+  "title": "HistoricalMemoryEquityMetadataSchema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "title",
+    "evaluation_period"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "evaluation_period": {
+      "type": "string"
+    }
+  }
+}

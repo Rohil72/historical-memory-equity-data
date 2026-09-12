@@ -1,0 +1,10 @@
+{
+  "omitted_files": [
+    {
+      "path": "research_runs/memory_study/cache/*.npy",
+      "size_approx": "1.87 GB",
+      "reason": "Large binary precomputed embedding arrays excluded from git tracking to prevent repository bloat.",
+      "reproduction_recipe": "Run `python -m memory_study.cache_builder` to recompute embeddings from raw market prices in under 5 minutes."
+    }
+  ]
+}
