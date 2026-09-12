@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "Required Data Files",
+      "passed": true,
+      "details": "Missing: []"
+    },
+    {
+      "name": "Required Metadata Files",
+      "passed": true,
+      "details": "Missing: []"
+    },
+    {
+      "name": "Run Manifest Count (150 cells)",
+      "passed": true,
+      "details": "Found 150 rows"
+    },
+    {
+      "name": "11 Final Arms Present",
+      "passed": true,
+      "details": "Found 11 arms: ['BENCH_EQUAL_WEIGHT', 'BENCH_MOMENTUM_21', 'HIST_PRIOR', 'MEM_RANDOM', 'MEM_SIM', 'MLP_BASE', 'MLP_GATE', 'MLP_MIX_SELECTED', 'TRANS_BASE', 'TRANS_GATE', 'TRANS_MIX_SELECTED']"
+    },
+    {
+      "name": "6 Sovereign Markets Present",
+      "passed": true,
+      "details": "Found 6 markets"
+    },
+    {
+      "name": "Master Performance Exact Replay Identity (<= 1e-10)",
+      "passed": true,
+      "details": "Max SR diff: 3.33e-16"
+    },
+    {
+      "name": "Primary Contrasts Point Difference Replay (<= 1e-4)",
+      "passed": true,
+      "details": "Max delta diff: 0.00e+00"
+    },
+    {
+      "name": "Penny Accounting Identity Certification",
+      "passed": true,
+      "details": "Max discrepancy <= $0.10 across all cells"
+    },
+    {
+      "name": "Bootstrap Draws Count (10,000 draws)",
+      "passed": true,
+      "details": "Found 10000 draws"
+    }
+  ],
+  "all_passed": true
+}
