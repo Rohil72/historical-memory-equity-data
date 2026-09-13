@@ -32,7 +32,7 @@
     "multiplicity_correction": "step_down_holm_bonferroni_on_c1_c5"
   },
   "selected_mixture_coefficients": {
-    "mlp": 0.5,
+    "mlp": 0.0,
     "transformer": 0.5
   }
 }
